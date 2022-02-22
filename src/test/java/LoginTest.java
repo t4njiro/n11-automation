@@ -53,7 +53,7 @@ public class LoginTest extends BaseTest {
      */
     @Test
     public void loginWrongPassword() throws InterruptedException {
-        Assertions.assertFalse(new HomePage(driver)
+        Assertions.assertTrue(new HomePage(driver)
                 .callLoginPage()
                 .loginWithEmail(validEmail, invalidPassword)
                 .isErrorMessageTrue("//*[@id='loginForm']/div[2]/div[2]/div", "E-posta adresiniz veya şifreniz hatalı"));
